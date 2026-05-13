@@ -65,22 +65,24 @@ body {
 
 .cursor-dot {
   width: 8px; height: 8px;
-  background: var(--black);
+  background: var(--white);
   border-radius: 50%;
   position: fixed;
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
 }
 .cursor-ring {
   width: 32px; height: 32px;
-  border: 1px solid rgba(0,0,0,.4);
+  border: 1px solid rgba(255,255,255,.8);
   border-radius: 50%;
   position: fixed;
   pointer-events: none;
   z-index: 9998;
   transform: translate(-50%, -50%);
   transition: all .12s ease;
+  mix-blend-mode: difference;
 }
 
 /* ─── Reveal animation ───────────────────────────────────────────────────── */

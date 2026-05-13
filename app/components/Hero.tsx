@@ -74,7 +74,7 @@ export default function Hero({ settings }: HeroProps) {
         <p style={{
           fontSize: '13px', fontWeight: 300,
           letterSpacing: '.06em', lineHeight: 1.9,
-          color: 'rgba(255,255,255,.6)',
+          color: 'rgba(255,255,255,.82)',
           maxWidth: '460px', marginBottom: '52px',
           animation: 'fadeUp .9s .7s both',
         }}>
@@ -86,8 +86,8 @@ export default function Hero({ settings }: HeroProps) {
           flexWrap: 'wrap',
           animation: 'fadeUp .9s .9s both',
         }}>
-          <a href="#booking" className="btn-white">Reserve Your Experience</a>
-          <a href="#services" className="btn-arrow">
+          <a href="/#booking" className="btn-white">Reserve Your Experience</a>
+          <a href="/#services" className="btn-arrow">
             <span className="btn-arrow-line" />
             Explore Treatments
           </a>

@@ -41,7 +41,7 @@ export default function Pricing({ pricing }: PricingProps) {
           Treatment <em style={{ color: 'var(--grey-pale)' }}>Menu</em>
         </h2>
         <p style={{
-          fontSize: '11px', color: 'var(--grey)',
+          fontSize: '11px', color: 'var(--grey-light)',
           letterSpacing: '.1em', marginTop: '12px', fontWeight: 300,
         }}>
           All prices include a full consultation. No hidden charges.
@@ -73,7 +73,7 @@ export default function Pricing({ pricing }: PricingProps) {
               padding: '12px 28px',
               fontSize: '9px', letterSpacing: '.22em', textTransform: 'uppercase',
               background: active === tab.key ? 'var(--white)' : 'transparent',
-              color: active === tab.key ? 'var(--black)' : 'rgba(255,255,255,.35)',
+              color: active === tab.key ? 'var(--black)' : 'rgba(255,255,255,.7)',
               border: 'none',
               borderRight: '1px solid rgba(255,255,255,.08)',
               transition: 'all .3s',
@@ -118,7 +118,7 @@ export default function Pricing({ pricing }: PricingProps) {
                 color: 'rgba(255,255,255,.85)', marginBottom: '4px',
               }}>{item.name}</div>
               <div style={{
-                fontSize: '10px', color: 'rgba(255,255,255,.3)', letterSpacing: '.08em',
+                fontSize: '10px', color: 'rgba(255,255,255,.6)', letterSpacing: '.08em',
               }}>{item.duration}</div>
             </div>
             <div style={{
@@ -130,7 +130,7 @@ export default function Pricing({ pricing }: PricingProps) {
       </div>
 
       <div className="reveal" style={{ textAlign: 'center' }}>
-        <a href="#booking" className="btn-white">Reserve Your Treatment</a>
+        <a href="/#booking" className="btn-white">Reserve Your Treatment</a>
       </div>
 
       <style>{`

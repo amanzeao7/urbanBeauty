@@ -43,7 +43,7 @@ export default async function TreatmentsPage() {
             Treatment <em>Menu</em>
           </h1>
           <p style={{
-            fontSize: '12px', color: 'rgba(255,255,255,.4)',
+            fontSize: '12px', color: 'rgba(255,255,255,.72)',
             letterSpacing: '.1em', fontWeight: 300,
           }}>
             All prices include a full consultation. No hidden charges.
@@ -66,7 +66,7 @@ export default async function TreatmentsPage() {
             Ready to book?
           </h2>
           <p style={{
-            fontSize: '12px', color: 'rgba(255,255,255,.4)',
+            fontSize: '12px', color: 'rgba(255,255,255,.72)',
             marginBottom: '32px', fontWeight: 300,
           }}>
             Call us or use our online booking system

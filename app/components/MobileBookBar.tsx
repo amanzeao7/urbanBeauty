@@ -16,10 +16,15 @@ export default function MobileBookBar() {
         }}
       >
         <a
-          href="#booking"
+          href="/#booking"
           onClick={e => {
             e.preventDefault()
-            document.querySelector('#booking')?.scrollIntoView({ behavior: 'smooth' })
+            const el = document.querySelector('#booking')
+            if (el) {
+              el.scrollIntoView({ behavior: 'smooth' })
+            } else {
+              window.location.href = '/#booking'
+            }
           }}
           style={{
             display: 'block',

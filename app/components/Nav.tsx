@@ -4,10 +4,10 @@ import { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
 
 const NAV_LINKS = [
-  { href: '#services', label: 'Treatments' },
-  { href: '#pricing',  label: 'Pricing'    },
-  { href: '#team',     label: 'Our Team'   },
-  { href: '#booking',  label: 'Contact'    },
+  { href: '/#services', label: 'Treatments' },
+  { href: '/#pricing',  label: 'Pricing'    },
+  { href: '/#team',     label: 'Our Team'   },
+  { href: '/#booking',  label: 'Contact'    },
 ]
 
 export default function Nav() {
@@ -36,8 +36,15 @@ export default function Nav() {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault()
     closeMenu()
-    const el = document.querySelector(href)
-    if (el) el.scrollIntoView({ behavior: 'smooth' })
+    // href is like '/#services' — extract the hash part
+    const hash = href.startsWith('/') ? href.slice(1) : href
+    const el = document.querySelector(hash)
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' })
+    } else {
+      // We're on a different page; navigate to homepage with the anchor
+      window.location.href = href
+    }
   }
 
   return (
@@ -104,8 +111,8 @@ export default function Nav() {
           ))}
           <li>
             <a
-              href="#booking"
-              onClick={e => handleNavClick(e, '#booking')}
+              href="/#booking"
+              onClick={e => handleNavClick(e, '/#booking')}
               style={{
                 background: scrolled ? 'var(--black)' : 'var(--white)',
                 color: scrolled ? 'var(--white)' : 'var(--black)',
@@ -200,8 +207,8 @@ export default function Nav() {
           </a>
         ))}
         <a
-          href="#booking"
-          onClick={e => handleNavClick(e, '#booking')}
+          href="/#booking"
+          onClick={e => handleNavClick(e, '/#booking')}
           style={{
             marginTop: '24px',
             background: 'var(--white)', color: 'var(--black)',

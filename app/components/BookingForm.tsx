@@ -38,7 +38,7 @@ const labelStyle: React.CSSProperties = {
   fontSize: '9px',
   letterSpacing: '.22em',
   textTransform: 'uppercase',
-  color: 'rgba(255,255,255,.35)',
+  color: 'rgba(255,255,255,.7)',
   marginBottom: '10px',
 }
 
@@ -388,7 +388,7 @@ export default function Booking({ settings }: BookingProps) {
               )}
 
               <p style={{
-                fontSize: '10px', color: 'rgba(255,255,255,.2)',
+                fontSize: '10px', color: 'rgba(255,255,255,.5)',
                 textAlign: 'center', marginTop: '16px',
                 fontWeight: 300, letterSpacing: '.04em',
               }}>

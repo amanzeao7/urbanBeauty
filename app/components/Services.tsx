@@ -32,7 +32,7 @@ export default function Services({ services }: ServicesProps) {
           Our<br /><em style={{ fontStyle: 'italic', color: 'var(--grey-pale)' }}>Signature</em><br />Treatments
         </h2>
         <a
-          href="#pricing"
+          href="/#pricing"
           style={{
             fontSize: '10px', letterSpacing: '.2em', textTransform: 'uppercase',
             color: 'var(--grey)', textDecoration: 'none',
@@ -103,19 +103,19 @@ export default function Services({ services }: ServicesProps) {
                 }}>{service.name}</div>
                 <div style={{
                   fontSize: '11px', fontWeight: 300,
-                  color: 'rgba(255,255,255,.45)', letterSpacing: '.05em',
+                  color: 'rgba(255,255,255,.7)', letterSpacing: '.05em',
                 }}>
                   From {service.startingPrice} · {service.duration}
                 </div>
                 <div style={{
                   fontSize: '12px', fontWeight: 300,
-                  lineHeight: 1.7, color: 'rgba(255,255,255,.5)',
+                  lineHeight: 1.7, color: 'rgba(255,255,255,.72)',
                   marginTop: '12px',
                 }} className="service-desc">
                   {service.tagline}
                 </div>
                 <a
-                  href="#booking"
+                  href="/#booking"
                   style={{
                     display: 'inline-flex', alignItems: 'center', gap: '8px',
                     fontSize: '9px', letterSpacing: '.25em', textTransform: 'uppercase',

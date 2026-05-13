@@ -28,7 +28,7 @@ export default function Ticker() {
             display: 'flex', alignItems: 'center', gap: '32px',
             padding: '0 32px',
             fontSize: '9px', letterSpacing: '.3em', textTransform: 'uppercase',
-            color: 'rgba(255,255,255,.3)',
+            color: 'rgba(255,255,255,.55)',
             whiteSpace: 'nowrap',
           }}>
             {item}

@@ -58,7 +58,7 @@ export default function GiftVoucher() {
 
         <p className="reveal" style={{
           fontSize: '12px', fontWeight: 300,
-          color: 'rgba(255,255,255,.45)',
+          color: 'rgba(255,255,255,.8)',
           letterSpacing: '.08em',
           marginBottom: '40px',
           lineHeight: 1.8,
@@ -67,7 +67,7 @@ export default function GiftVoucher() {
           Perfect for every occasion.
         </p>
 
-        <a href="#booking" className="btn-ghost reveal">
+        <a href="/#booking" className="btn-ghost reveal">
           Purchase a Voucher
         </a>
       </div>

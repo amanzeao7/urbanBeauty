@@ -93,7 +93,7 @@ export default function Featured() {
           ))}
         </ul>
 
-        <a href="#booking" className="btn-black reveal">
+        <a href="/#booking" className="btn-black reveal">
           Book Your CACI Session
         </a>
       </div>

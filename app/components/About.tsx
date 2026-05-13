@@ -139,7 +139,7 @@ export default function About({ settings }: AboutProps) {
             ))}
           </div>
 
-          <a href="#services" className="btn-black reveal">
+          <a href="/#services" className="btn-black reveal">
             Discover Our Treatments
           </a>
         </div>

@@ -32,7 +32,7 @@ export default function Footer({ settings }: FooterProps) {
           }}>Urban Beauty</div>
           <p style={{
             fontSize: '12px', fontWeight: 300,
-            lineHeight: 1.85, color: 'rgba(255,255,255,.3)', marginBottom: '28px',
+            lineHeight: 1.85, color: 'rgba(255,255,255,.65)', marginBottom: '28px',
           }}>
             Cheshire&apos;s premier luxury beauty salon. Expert treatments,
             exceptional results, and an experience crafted entirely for you.
@@ -50,9 +50,9 @@ export default function Footer({ settings }: FooterProps) {
                 aria-label={`Urban Beauty on ${s.label}`}
                 style={{
                   width: '34px', height: '34px',
-                  border: '1px solid rgba(255,255,255,.1)',
+                  border: '1px solid rgba(255,255,255,.3)',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  fontSize: '10px', color: 'rgba(255,255,255,.35)',
+                  fontSize: '10px', color: 'rgba(255,255,255,.65)',
                   textDecoration: 'none',
                   transition: 'border-color .3s, color .3s',
                   fontWeight: 500,
@@ -62,8 +62,8 @@ export default function Footer({ settings }: FooterProps) {
                   e.currentTarget.style.color = 'var(--white)'
                 }}
                 onMouseLeave={e => {
-                  e.currentTarget.style.borderColor = 'rgba(255,255,255,.1)'
-                  e.currentTarget.style.color = 'rgba(255,255,255,.35)'
+                  e.currentTarget.style.borderColor = 'rgba(255,255,255,.3)'
+                  e.currentTarget.style.color = 'rgba(255,255,255,.65)'
                 }}
               >
                 {s.short}
@@ -76,18 +76,18 @@ export default function Footer({ settings }: FooterProps) {
         <nav aria-label="Footer treatments navigation">
           <div style={{
             fontSize: '9px', letterSpacing: '.3em', textTransform: 'uppercase',
-            color: 'rgba(255,255,255,.3)', marginBottom: '24px',
+            color: 'rgba(255,255,255,.55)', marginBottom: '24px',
           }}>Treatments</div>
           <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '12px' }}>
             {TREATMENTS.map(t => (
               <li key={t}>
-                <a href="#services" style={{
+                <a href="/#services" style={{
                   fontSize: '12px', fontWeight: 300,
-                  color: 'rgba(255,255,255,.3)', textDecoration: 'none',
+                  color: 'rgba(255,255,255,.65)', textDecoration: 'none',
                   transition: 'color .3s', letterSpacing: '.04em',
                 }}
                 onMouseEnter={e => (e.currentTarget.style.color = 'var(--white)')}
-                onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,.3)')}
+                onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,.65)')}
                 >{t}</a>
               </li>
             ))}
@@ -98,7 +98,7 @@ export default function Footer({ settings }: FooterProps) {
         <div>
           <div style={{
             fontSize: '9px', letterSpacing: '.3em', textTransform: 'uppercase',
-            color: 'rgba(255,255,255,.3)', marginBottom: '24px',
+            color: 'rgba(255,255,255,.55)', marginBottom: '24px',
           }}>Opening Hours</div>
           {[
             { day: 'Mon – Fri', hours: '9am – 7pm' },
@@ -108,11 +108,11 @@ export default function Footer({ settings }: FooterProps) {
             <div key={h.day} style={{
               display: 'flex', justifyContent: 'space-between',
               fontSize: '11px', fontWeight: 300,
-              color: 'rgba(255,255,255,.2)',
+              color: 'rgba(255,255,255,.6)',
               padding: '8px 0',
-              borderBottom: '1px solid rgba(255,255,255,.04)',
+              borderBottom: '1px solid rgba(255,255,255,.08)',
             }}>
-              <span style={{ color: 'rgba(255,255,255,.35)' }}>{h.day}</span>
+              <span style={{ color: 'rgba(255,255,255,.75)' }}>{h.day}</span>
               <span>{h.hours}</span>
             </div>
           ))}
@@ -122,20 +122,20 @@ export default function Footer({ settings }: FooterProps) {
         <div>
           <div style={{
             fontSize: '9px', letterSpacing: '.3em', textTransform: 'uppercase',
-            color: 'rgba(255,255,255,.3)', marginBottom: '24px',
+            color: 'rgba(255,255,255,.55)', marginBottom: '24px',
           }}>Find Us</div>
           <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '28px' }}>
             {[settings.address, settings.addressLine2, settings.postcode].map(line => (
               <li key={line} style={{
                 fontSize: '12px', fontWeight: 300,
-                color: 'rgba(255,255,255,.3)', letterSpacing: '.04em',
+                color: 'rgba(255,255,255,.65)', letterSpacing: '.04em',
               }}>{line}</li>
             ))}
           </ul>
 
           <div style={{
             fontSize: '9px', letterSpacing: '.3em', textTransform: 'uppercase',
-            color: 'rgba(255,255,255,.3)', marginBottom: '24px',
+            color: 'rgba(255,255,255,.55)', marginBottom: '24px',
           }}>Contact</div>
           <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '12px' }}>
             {[
@@ -145,11 +145,11 @@ export default function Footer({ settings }: FooterProps) {
               <li key={c.href}>
                 <a href={c.href} style={{
                   fontSize: '12px', fontWeight: 300,
-                  color: 'rgba(255,255,255,.3)', textDecoration: 'none',
+                  color: 'rgba(255,255,255,.65)', textDecoration: 'none',
                   transition: 'color .3s',
                 }}
                 onMouseEnter={e => (e.currentTarget.style.color = 'var(--white)')}
-                onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,.3)')}
+                onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,.65)')}
                 >{c.label}</a>
               </li>
             ))}
@@ -160,7 +160,7 @@ export default function Footer({ settings }: FooterProps) {
       {/* Bottom bar */}
       <div style={{
         display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-        fontSize: '10px', color: 'rgba(255,255,255,.18)',
+        fontSize: '10px', color: 'rgba(255,255,255,.5)',
         maxWidth: '1300px', margin: '0 auto',
         fontWeight: 300, letterSpacing: '.04em',
       }} className="footer-bottom">
