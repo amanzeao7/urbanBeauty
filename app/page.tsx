@@ -57,7 +57,6 @@ export default async function HomePage() {
   return (
     <>
       {/* Client-side enhancements */}
-      <CustomCursor />
       <RevealObserver />
       <MobileBookBar />
 
