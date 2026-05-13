@@ -1,5 +1,4 @@
 import Nav             from './components/Nav'
-import CustomCursor    from './components/CustomCursor'
 import RevealObserver  from './components/RevealObserver'
 import Hero            from './components/Hero'
 import Ticker          from './components/Ticker'
