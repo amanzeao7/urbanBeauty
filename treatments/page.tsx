@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import Nav from '../components/Nav'
-import Footer from '../components/Footer'
+import Nav from '@/app/components/Nav'
+import Footer from '@/app/components/Footer'
 import { getSiteSettings } from '@/lib/sanity'
 import { PLACEHOLDER_SETTINGS } from '@/lib/placeholder-data'
 
