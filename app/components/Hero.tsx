@@ -35,10 +35,18 @@ export default function Hero({ settings }: HeroProps) {
         fetchPriority="high"
       />
 
-      {/* Gradient overlay */}
+      {/* Gradient overlay — bottom */}
       <div style={{
         position: 'absolute', inset: 0,
         background: 'linear-gradient(to top, rgba(0,0,0,.88) 0%, rgba(0,0,0,.35) 55%, rgba(0,0,0,.15) 100%)',
+      }} aria-hidden="true" />
+
+      {/* Gradient overlay — top (keeps nav legible before scroll) */}
+      <div style={{
+        position: 'absolute', top: 0, left: 0, right: 0,
+        height: '180px',
+        background: 'linear-gradient(to bottom, rgba(0,0,0,.55) 0%, transparent 100%)',
+        zIndex: 1,
       }} aria-hidden="true" />
 
       {/* Content */}

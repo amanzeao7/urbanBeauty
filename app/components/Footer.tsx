@@ -171,6 +171,8 @@ export default function Footer({ settings }: FooterProps) {
           <a href="/cookie-policy" style={{ color: 'inherit', textDecoration: 'none' }}>Cookie Policy</a>
           {' · '}
           <a href="/terms" style={{ color: 'inherit', textDecoration: 'none' }}>Terms</a>
+          {' · '}
+          <a href="https://amanze.vercel.app" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>Built by Amanze</a>
         </span>
       </div>
 
