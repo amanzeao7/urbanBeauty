@@ -4,10 +4,10 @@ import { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
 
 const NAV_LINKS = [
-  { href: '/#services', label: 'Treatments' },
-  { href: '/#pricing',  label: 'Pricing'    },
-  { href: '/#team',     label: 'Our Team'   },
-  { href: '/#booking',  label: 'Contact'    },
+  { href: '/treatments', label: 'Treatments' },
+  { href: '/#pricing',   label: 'Pricing'    },
+  { href: '/#team',      label: 'Our Team'   },
+  { href: '/#booking',   label: 'Contact'    },
 ]
 
 export default function Nav() {
@@ -92,21 +92,38 @@ export default function Nav() {
         >
           {NAV_LINKS.map(link => (
             <li key={link.href}>
-              <a
-                href={link.href}
-                onClick={e => handleNavClick(e, link.href)}
-                style={{
-                  fontSize: '10px', fontWeight: 400,
-                  letterSpacing: '.25em', textTransform: 'uppercase',
-                  color: scrolled ? 'var(--grey)' : 'rgba(255,255,255,.75)',
-                  textDecoration: 'none',
-                  transition: 'color .3s',
-                }}
-                onMouseEnter={e => (e.currentTarget.style.color = 'var(--accent)')}
-                onMouseLeave={e => (e.currentTarget.style.color = scrolled ? 'var(--grey)' : 'rgba(255,255,255,.75)')}
-              >
-                {link.label}
-              </a>
+              {link.href.startsWith('/#') ? (
+                <a
+                  href={link.href}
+                  onClick={e => handleNavClick(e, link.href)}
+                  style={{
+                    fontSize: '10px', fontWeight: 400,
+                    letterSpacing: '.25em', textTransform: 'uppercase',
+                    color: scrolled ? 'var(--grey)' : 'rgba(255,255,255,.75)',
+                    textDecoration: 'none',
+                    transition: 'color .3s',
+                  }}
+                  onMouseEnter={e => (e.currentTarget.style.color = 'var(--accent)')}
+                  onMouseLeave={e => (e.currentTarget.style.color = scrolled ? 'var(--grey)' : 'rgba(255,255,255,.75)')}
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  href={link.href}
+                  style={{
+                    fontSize: '10px', fontWeight: 400,
+                    letterSpacing: '.25em', textTransform: 'uppercase',
+                    color: scrolled ? 'var(--grey)' : 'rgba(255,255,255,.75)',
+                    textDecoration: 'none',
+                    transition: 'color .3s',
+                  }}
+                  onMouseEnter={e => (e.currentTarget.style.color = 'var(--accent)')}
+                  onMouseLeave={e => (e.currentTarget.style.color = scrolled ? 'var(--grey)' : 'rgba(255,255,255,.75)')}
+                >
+                  {link.label}
+                </Link>
+              )}
             </li>
           ))}
           <li>
@@ -186,25 +203,47 @@ export default function Nav() {
         }}
       >
         {NAV_LINKS.map(link => (
-          <a
-            key={link.href}
-            href={link.href}
-            onClick={e => handleNavClick(e, link.href)}
-            style={{
-              fontFamily: 'var(--font-serif)',
-              fontSize: 'clamp(28px, 8vw, 48px)',
-              fontWeight: 300,
-              color: 'var(--white)',
-              textDecoration: 'none',
-              letterSpacing: '.05em',
-              padding: '12px 0',
-              transition: 'color .3s',
-            }}
-            onMouseEnter={e => (e.currentTarget.style.color = 'var(--accent)')}
-            onMouseLeave={e => (e.currentTarget.style.color = 'var(--white)')}
-          >
-            {link.label}
-          </a>
+          link.href.startsWith('/#') ? (
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={e => handleNavClick(e, link.href)}
+              style={{
+                fontFamily: 'var(--font-serif)',
+                fontSize: 'clamp(28px, 8vw, 48px)',
+                fontWeight: 300,
+                color: 'var(--white)',
+                textDecoration: 'none',
+                letterSpacing: '.05em',
+                padding: '12px 0',
+                transition: 'color .3s',
+              }}
+              onMouseEnter={e => (e.currentTarget.style.color = 'var(--accent)')}
+              onMouseLeave={e => (e.currentTarget.style.color = 'var(--white)')}
+            >
+              {link.label}
+            </a>
+          ) : (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={closeMenu}
+              style={{
+                fontFamily: 'var(--font-serif)',
+                fontSize: 'clamp(28px, 8vw, 48px)',
+                fontWeight: 300,
+                color: 'var(--white)',
+                textDecoration: 'none',
+                letterSpacing: '.05em',
+                padding: '12px 0',
+                transition: 'color .3s',
+              }}
+              onMouseEnter={e => (e.currentTarget.style.color = 'var(--accent)')}
+              onMouseLeave={e => (e.currentTarget.style.color = 'var(--white)')}
+            >
+              {link.label}
+            </Link>
+          )
         ))}
         <a
           href="/#booking"
