@@ -1,5 +1,3 @@
-
-
 import type { Metadata } from 'next'
 import TreatmentsClient from './TreatmentsClient'
 import Nav from '@/app/components/Nav'
