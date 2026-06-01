@@ -75,19 +75,20 @@ export default function Nav() {
           transition: 'all .5s',
         }}
       >
-        <Link
-          href="/"
-          aria-label="Urban Beauty — Home"
-          style={{
-            fontFamily: 'var(--font-serif)',
-            fontSize: '18px', fontWeight: 500,
-            letterSpacing: '.2em', textTransform: 'uppercase',
-            color: logoColor, textDecoration: 'none',
-            transition: 'color .4s',
-          }}
-        >
-          Urban Beauty
-        </Link>
+     <Link href="/" aria-label="Urban Beauty — Home"
+  style={{
+    fontFamily: 'var(--font-serif)',
+    fontSize: '18px',
+    fontWeight: 500,
+    letterSpacing: '.2em',
+    color: scrolled ? 'var(--black)' : 'var(--white)',
+    textDecoration: 'none',
+    transition: 'color .4s',
+    textTransform: 'uppercase',
+  }}
+>
+  Urban Beauty
+</Link>
 
         {/* Desktop links */}
         <ul role="list" style={{
