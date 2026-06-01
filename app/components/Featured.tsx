@@ -75,7 +75,7 @@ export default function Featured() {
             </li>
           ))}
         </ul>
-        
+        <a
           href="https://www.phorest.com/salon/urbanbeautysalon"
           target="_blank"
           rel="noopener noreferrer"
