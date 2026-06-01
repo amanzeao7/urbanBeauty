@@ -115,17 +115,19 @@ export default function Services({ services }: ServicesProps) {
                   {service.tagline}
                 </div>
                 <a
-                  href="/#booking"
-                  style={{
-                    display: 'inline-flex', alignItems: 'center', gap: '8px',
-                    fontSize: '9px', letterSpacing: '.25em', textTransform: 'uppercase',
-                    color: 'var(--accent)', marginTop: '16px', textDecoration: 'none',
-                  }}
-                  className="service-book-link"
-                  aria-label={`Book ${service.name}`}
-                >
-                  Book Now →
-                </a>
+                  href="https://www.phorest.com/salon/urbanbeautysalon"
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{
+    display: 'inline-flex', alignItems: 'center', gap: '8px',
+    fontSize: '9px', letterSpacing: '.25em', textTransform: 'uppercase',
+    color: 'var(--accent)', marginTop: '16px', textDecoration: 'none',
+  }}
+  className="service-book-link"
+  aria-label={`Book ${service.name}`}
+>
+  Book Now →
+</a>
               </div>
             </article>
           )
