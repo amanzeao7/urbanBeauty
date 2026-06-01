@@ -126,7 +126,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* ─── Phorest Floating Book Now Widget ─────────────────────────── */}
         <Script id="phorest-config" strategy="lazyOnload">{`
           window.phorestBookNowWidgetConfig = {
-            subdomain: "PHOREST_SUBDOMAIN",
+            subdomain: "urbanbeautysalon"
             buttonColor: "#c9a96e"
           };
         `}</Script>
