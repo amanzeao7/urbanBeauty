@@ -4,10 +4,9 @@ import { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
 
 const NAV_LINKS = [
-  { href: '/treatments', label: 'Treatments' },
-  { href: '/#pricing',   label: 'Pricing'    },
-  { href: '/#team',      label: 'Our Team'   },
-  { href: '/#booking',   label: 'Contact'    },
+  { href: '/#services', label: 'Treatments' },
+  { href: '/#team',     label: 'Our Team'   },
+  { href: '/#booking',  label: 'Contact'    },
 ]
 
 export default function Nav() {
