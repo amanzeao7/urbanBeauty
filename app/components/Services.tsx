@@ -105,7 +105,7 @@ export default function Services({ services }: ServicesProps) {
                   fontSize: '11px', fontWeight: 300,
                   color: 'rgba(255,255,255,.7)', letterSpacing: '.05em',
                 }}>
-                  From {service.startingPrice} · {service.duration}
+                 {service.duration}
                 </div>
                 <div style={{
                   fontSize: '12px', fontWeight: 300,
