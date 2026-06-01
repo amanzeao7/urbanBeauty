@@ -16,31 +16,24 @@ export default function MobileBookBar() {
         }}
       >
         <a
-          href="/#booking"
-          onClick={e => {
-            e.preventDefault()
-            const el = document.querySelector('#booking')
-            if (el) {
-              el.scrollIntoView({ behavior: 'smooth' })
-            } else {
-              window.location.href = '/#booking'
-            }
-          }}
-          style={{
-            display: 'block',
-            width: '100%',
-            padding: '18px',
-            textAlign: 'center',
-            fontSize: '10px',
-            fontWeight: 500,
-            letterSpacing: '.25em',
-            textTransform: 'uppercase',
-            color: 'var(--white)',
-            textDecoration: 'none',
-          }}
-        >
-          Book Your Treatment
-        </a>
+          href="https://www.phorest.com/salon/urbanbeautysalon"
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{
+    display: 'block',
+    width: '100%',
+    padding: '18px',
+    textAlign: 'center',
+    fontSize: '10px',
+    fontWeight: 500,
+    letterSpacing: '.25em',
+    textTransform: 'uppercase',
+    color: 'var(--white)',
+    textDecoration: 'none',
+  }}
+>
+  Book Your Treatment
+</a>
       </div>
 
       <style>{`
