@@ -125,13 +125,8 @@ export default function Pricing({ pricing }: PricingProps) {
       </div>
 
       {/* CTA */}
-    <div className="reveal" style={{ textAlign: 'center' }}>
-        
-          href={PHOREST_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-white"
-        >
+      <div className="reveal" style={{ textAlign: 'center' }}>
+        <a href={PHOREST_URL} target="_blank" rel="noopener noreferrer" className="btn-white">
           Book Your Treatment
         </a>
       </div>
