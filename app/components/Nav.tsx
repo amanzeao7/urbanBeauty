@@ -127,8 +127,7 @@ export default function Nav() {
           ))}
           <li>
             <a
-              href="/#booking"
-              onClick={e => handleNavClick(e, '/#booking')}
+              href="https://www.phorest.com/salon/urbanbeautysalon"
               style={{
                 background: scrolled ? 'var(--black)' : 'var(--white)',
                 color: scrolled ? 'var(--white)' : 'var(--black)',
@@ -245,8 +244,7 @@ export default function Nav() {
           )
         ))}
         <a
-          href="/#booking"
-          onClick={e => handleNavClick(e, '/#booking')}
+       href="https://www.phorest.com/salon/urbanbeautysalon"
           style={{
             marginTop: '24px',
             background: 'var(--white)', color: 'var(--black)',
