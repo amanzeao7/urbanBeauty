@@ -94,7 +94,15 @@ export default function Hero({ settings }: HeroProps) {
           flexWrap: 'wrap',
           animation: 'fadeUp .9s .9s both',
         }}>
-          <a href="/#booking" className="btn-white">Reserve Your Experience</a>
+
+      
+          <a     href="https://www.phorest.com/salon/urbanbeautysalon"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="btn-white"
+>
+  Reserve Your Experience
+</a>
           <a href="/#services" className="btn-arrow">
             <span className="btn-arrow-line" />
             Explore Treatments
