@@ -22,23 +22,6 @@ export default function Featured() {
           loading="lazy"
           className="featured-img"
         />
-        {/* Price badge */}
-        <div style={{
-          position: 'absolute', top: '48px', left: '48px',
-          background: 'var(--black)', color: 'var(--white)',
-          padding: '16px 20px', textAlign: 'center',
-        }} aria-hidden="true">
-          <div style={{
-            fontSize: '8px', letterSpacing: '.3em', textTransform: 'uppercase',
-            color: 'var(--grey-light)',
-          }}>Course of 10</div>
-          <span style={{
-            fontFamily: 'var(--font-serif)',
-            fontSize: '20px', fontWeight: 300,
-            color: 'var(--white)', display: 'block', marginTop: '4px',
-          }}>From £480</span>
-        </div>
-      </div>
 
       {/* Copy */}
       <div style={{
@@ -93,9 +76,14 @@ export default function Featured() {
           ))}
         </ul>
 
-        <a href="/#booking" className="btn-black reveal">
-          Book Your CACI Session
-        </a>
+
+       <a  href="https://www.phorest.com/salon/urbanbeautysalon"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="btn-black reveal"
+>
+  Book Your CACI Session
+</a>
       </div>
 
       <style>{`
