@@ -22,6 +22,7 @@ export default function Featured() {
           loading="lazy"
           className="featured-img"
         />
+      </div> {/* ← this was missing */}
 
       {/* Copy */}
       <div style={{
@@ -50,7 +51,6 @@ export default function Featured() {
           technology to lift, tone, and rejuvenate — delivering visible results without
           a single needle or day of downtime.
         </p>
-
         <ul className="reveal" style={{ listStyle: 'none', marginBottom: '44px' }}>
           {[
             'Clinically proven to lift and contour',
@@ -75,15 +75,14 @@ export default function Featured() {
             </li>
           ))}
         </ul>
-
-
-       <a  href="https://www.phorest.com/salon/urbanbeautysalon"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="btn-black reveal"
->
-  Book Your CACI Session
-</a>
+        
+          href="https://www.phorest.com/salon/urbanbeautysalon"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-black reveal"
+        >
+          Book Your CACI Session
+        </a>
       </div>
 
       <style>{`
