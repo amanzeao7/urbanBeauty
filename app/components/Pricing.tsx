@@ -15,6 +15,8 @@ const TABS: { key: PricingItem['category']; label: string }[] = [
   { key: 'lash',    label: 'Lash & Brow' },
 ]
 
+const PHOREST_URL = 'https://www.phorest.com/salon/PHOREST_SUBDOMAIN'
+
 export default function Pricing({ pricing }: PricingProps) {
   const [active, setActive] = useState<PricingItem['category']>('facial')
 
@@ -29,7 +31,7 @@ export default function Pricing({ pricing }: PricingProps) {
     >
       {/* Header */}
       <div className="reveal" style={{ textAlign: 'center', marginBottom: '56px' }}>
-        <div className="section-tag center" style={{ color: 'rgba(200,168,130,.7)' }}>Investment</div>
+        <div className="section-tag center" style={{ color: 'rgba(200,168,130,.7)' }}>Treatments</div>
         <h2
           id="pricing-heading"
           style={{
@@ -44,7 +46,7 @@ export default function Pricing({ pricing }: PricingProps) {
           fontSize: '11px', color: 'var(--grey-light)',
           letterSpacing: '.1em', marginTop: '12px', fontWeight: 300,
         }}>
-          All prices include a full consultation. No hidden charges.
+          All treatments include a full consultation. Contact us for pricing.
         </p>
       </div>
 
@@ -85,7 +87,7 @@ export default function Pricing({ pricing }: PricingProps) {
         ))}
       </div>
 
-      {/* Price list */}
+      {/* Treatment list — no prices */}
       <div
         id={`panel-${active}`}
         role="tabpanel"
@@ -104,7 +106,6 @@ export default function Pricing({ pricing }: PricingProps) {
           <div
             key={item.id}
             style={{
-              display: 'flex', justifyContent: 'space-between', alignItems: 'center',
               padding: '22px 32px',
               background: 'rgba(255,255,255,.02)',
               transition: 'background .3s',
@@ -112,25 +113,27 @@ export default function Pricing({ pricing }: PricingProps) {
             onMouseEnter={e => (e.currentTarget.style.background = 'rgba(255,255,255,.05)')}
             onMouseLeave={e => (e.currentTarget.style.background = 'rgba(255,255,255,.02)')}
           >
-            <div>
-              <div style={{
-                fontSize: '14px', fontWeight: 300,
-                color: 'rgba(255,255,255,.85)', marginBottom: '4px',
-              }}>{item.name}</div>
-              <div style={{
-                fontSize: '10px', color: 'rgba(255,255,255,.6)', letterSpacing: '.08em',
-              }}>{item.duration}</div>
-            </div>
             <div style={{
-              fontFamily: 'var(--font-serif)',
-              fontSize: '26px', fontWeight: 300, color: 'var(--white)',
-            }}>{item.price}</div>
+              fontSize: '14px', fontWeight: 300,
+              color: 'rgba(255,255,255,.85)', marginBottom: '4px',
+            }}>{item.name}</div>
+            <div style={{
+              fontSize: '10px', color: 'rgba(255,255,255,.6)', letterSpacing: '.08em',
+            }}>{item.duration}</div>
           </div>
         ))}
       </div>
 
+      {/* CTA */}
       <div className="reveal" style={{ textAlign: 'center' }}>
-        <a href="/#booking" className="btn-white">Reserve Your Treatment</a>
+        
+          href={PHOREST_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-white"
+        >
+          Book Your Treatment
+        </a>
       </div>
 
       <style>{`
