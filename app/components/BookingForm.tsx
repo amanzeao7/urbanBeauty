@@ -152,68 +152,19 @@ export default function Booking({ settings }: BookingProps) {
             ))}
           </div>
 
-          {/* Decorative map placeholder */}
-          <div className="reveal" style={{
-            position: 'relative', height: '300px',
-            overflow: 'hidden', marginTop: '36px',
-            background: 'var(--off-white)',
-          }} role="img" aria-label="Map placeholder — 14 Bridge Street, Warrington WA1 2RJ">
-            {/* Grid lines */}
-            <div style={{
-              position: 'absolute', inset: 0,
-              backgroundImage: `
-                repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(0,0,0,.05) 39px, rgba(0,0,0,.05) 40px),
-                repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(0,0,0,.05) 39px, rgba(0,0,0,.05) 40px)
-              `,
-            }} aria-hidden="true" />
-            {/* Pin */}
-            <div style={{
-              position: 'absolute', top: '50%', left: '55%',
-              transform: 'translate(-50%, -50%)',
-            }}>
-              <div style={{
-                width: '20px', height: '20px',
-                border: '2px solid var(--black)',
-                borderRadius: '50%',
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                position: 'relative',
-              }}>
-                <div style={{
-                  width: '7px', height: '7px',
-                  background: 'var(--black)', borderRadius: '50%',
-                }} />
-                <div style={{
-                  position: 'absolute', inset: '-8px',
-                  border: '1px solid rgba(0,0,0,.2)',
-                  borderRadius: '50%',
-                  animation: 'mapPulse 2s infinite',
-                }} />
-              </div>
-            </div>
-            {/* Info card */}
-            <div style={{
-              position: 'absolute', top: '20px', left: '20px',
-              background: 'var(--black)',
-              padding: '18px 22px',
-              borderLeft: '3px solid var(--accent)',
-            }}>
-              <div style={{
-                fontFamily: 'var(--font-serif)',
-                fontSize: '14px', color: 'var(--white)', marginBottom: '4px',
-              }}>Urban Beauty Salon</div>
-              <div style={{
-                fontSize: '10px', color: 'rgba(255,255,255,.4)',
-                lineHeight: 1.6, marginBottom: '8px', fontWeight: 300,
-              }}>
-                14 Bridge Street<br />Warrington, WA1 2RJ
-              </div>
-              <div style={{
-                fontSize: '9px', letterSpacing: '.18em', textTransform: 'uppercase',
-                color: 'var(--accent)',
-              }}>Open Today · 9am – 7pm</div>
-            </div>
+          {/* Google Maps embed */}
+          <div className="reveal" style={{ marginTop: '36px', overflow: 'hidden' }}>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2379.55016238481!2d-2.6577552880511166!3d53.38709777155848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487b02c11485d7c9%3A0x35bbe3cac24544ca!2sUrban%20Beauty%20Salon!5e0!3m2!1sen!2suk!4v1780349942673!5m2!1sen!2suk"
+              width="100%"
+              height="300"
+              style={{ border: 0, display: 'block' }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Urban Beauty Salon location"
+            />
           </div>
-        </div>
 
         {/* ── Right: form ── */}
         <div
