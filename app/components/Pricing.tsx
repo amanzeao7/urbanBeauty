@@ -15,7 +15,7 @@ const TABS: { key: PricingItem['category']; label: string }[] = [
   { key: 'lash',    label: 'Lash & Brow' },
 ]
 
-const PHOREST_URL = 'https://www.phorest.com/salon/PHOREST_SUBDOMAIN'
+const PHOREST_URL = 'https://www.phorest.com/salon/urbanbeautysalon'
 
 export default function Pricing({ pricing }: PricingProps) {
   const [active, setActive] = useState<PricingItem['category']>('facial')
