@@ -9,6 +9,10 @@ export const metadata: Metadata = {
     default: 'Urban Beauty Salon — Luxury Beauty Treatments in Warrington, Cheshire',
     template: '%s | Urban Beauty Salon',
   },
+  icons: {
+  icon: '/favicon.png',
+  apple: '/favicon.png',
+},
   description:
     'Award-winning luxury beauty salon in Warrington, Cheshire. Specialising in CACI non-surgical facelifts, bespoke facials, massage therapy, lash & brow, and nail treatments. Book online today.',
   keywords: [
