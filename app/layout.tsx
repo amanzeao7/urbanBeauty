@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import './globals.css'
 
 // ─── SEO & Open Graph ─────────────────────────────────────────────────────────
@@ -36,7 +37,7 @@ export const metadata: Metadata = {
     siteName: 'Urban Beauty Salon',
     title: 'Urban Beauty Salon — Luxury Beauty Treatments in Warrington, Cheshire',
     description:
-      'Cheshire\'s premier luxury beauty salon. Expert treatments, exceptional results, crafted entirely for you.',
+      "Cheshire's premier luxury beauty salon. Expert treatments, exceptional results, crafted entirely for you.",
     images: [
       {
         url: '/og-image.jpg',
@@ -57,7 +58,7 @@ export const metadata: Metadata = {
   },
 }
 
-// ─── Local Business JSON-LD (GEO / Rich Results) ─────────────────────────────
+// ─── Local Business JSON-LD ────────────────────────────────────────────────────
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'BeautySalon',
@@ -79,8 +80,8 @@ const jsonLd = {
   },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: 53.3900,
-    longitude: -2.5970,
+    latitude: 53.39,
+    longitude: -2.597,
   },
   openingHoursSpecification: [
     { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '09:00', closes: '19:00' },
@@ -117,11 +118,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body>
-        {/* Skip to content — WCAG 2.1 AA */}
         <a className="skip-link" href="#main-content">
           Skip to main content
         </a>
         {children}
+
+        {/* ─── Phorest Floating Book Now Widget ─────────────────────────── */}
+        <Script id="phorest-config" strategy="lazyOnload">{`
+          window.phorestBookNowWidgetConfig = {
+            subdomain: "PHOREST_SUBDOMAIN",
+            buttonColor: "#c9a96e"
+          };
+        `}</Script>
+        <Script
+          src="https://widget.phorest.com/online-booking-client-app/dist/assets/index.js"
+          strategy="lazyOnload"
+        />
       </body>
     </html>
   )
