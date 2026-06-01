@@ -165,6 +165,7 @@ export default function Booking({ settings }: BookingProps) {
               title="Urban Beauty Salon location"
             />
           </div>
+        </div> {/* ← this was missing */}
 
         {/* ── Right: form ── */}
         <div
@@ -351,10 +352,6 @@ export default function Booking({ settings }: BookingProps) {
       </div>
 
       <style>{`
-        @keyframes mapPulse {
-          0%, 100% { opacity: .6; transform: scale(1); }
-          50% { opacity: 0; transform: scale(1.5); }
-        }
         @media (max-width: 900px) {
           .booking-grid { grid-template-columns: 1fr !important; padding: 64px 24px 100px !important; gap: 48px !important; }
         }
