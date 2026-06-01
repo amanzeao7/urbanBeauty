@@ -63,22 +63,18 @@ export default function Nav() {
           transition: 'all .5s',
         }}
       >
-        <Link
-          href="/"
-          aria-label="Urban Beauty — Home"
-          style={{
-            fontFamily: 'var(--font-serif)',
-            fontSize: '18px',
-            fontWeight: 500,
-            letterSpacing: '.2em',
-            color: scrolled ? 'var(--black)' : 'var(--white)',
-            textDecoration: 'none',
-            transition: 'color .4s',
-            textTransform: 'uppercase',
-          }}
-        >
-          Urban Beauty
-        </Link>
+       <Link href="/" aria-label="Urban Beauty — Home">
+  <img
+    src="/urbanlogo1.png"
+    alt="Urban Beauty Salon"
+    height={28}
+    style={{
+      height: '28px',
+      width: 'auto',
+      filter: scrolled ? 'none' : 'invert(1)',
+    }}
+  />
+</Link>
 
         {/* Desktop links */}
         <ul
